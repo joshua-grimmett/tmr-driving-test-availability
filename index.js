@@ -11,7 +11,9 @@ const details = require('./details')
 const EventBot = require('./core/EventBot');
 
 EventBot
-    .create()
+    .create({
+        driverPath: process.argv[2] || 'chromedriver_MacOS_m1_v103'
+    })
     .then(async bot => {
         await bot.continuePage();
         await bot.acceptPage();
