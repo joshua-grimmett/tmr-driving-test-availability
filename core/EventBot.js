@@ -8,13 +8,11 @@ const { urls, xpaths, selectors } = require('../config');
 
 
 class EventBot {
-    constructor({ driver, keychain }) {
+    constructor({ driver }) {
         /**
          * @type {WebDriver}
          */
         this.driver = driver;
-        if (!keychain) throw new Error('Email AND password required.')
-        this.keychain = keychain;
     }
 
     static async create(data) {

@@ -9,18 +9,15 @@ const details = require('./details')
 
 const EventBot = require('./core/EventBot');
 
-EventBot.create({
-    keychain: {
-        email: process.env.ATTENDME_EMAIL,
-        password: process.env.ATTENDME_PASSWORD
-    }
-}).then(async bot => {
-    await bot.continuePage();
-    await bot.acceptPage();
-    await bot.bookingDetailsPage(details);
-    await bot.confirmBookingDetailsPage();
-    await bot.locationPage(details);
-    
-    const nextDate = await bot.nextDate();
-    console.log(nextDate);
-});
+EventBot
+    .create()
+    .then(async bot => {
+        await bot.continuePage();
+        await bot.acceptPage();
+        await bot.bookingDetailsPage(details);
+        await bot.confirmBookingDetailsPage();
+        await bot.locationPage(details);
+        
+        const nextDate = await bot.nextDate();
+        console.log(nextDate);
+    });
