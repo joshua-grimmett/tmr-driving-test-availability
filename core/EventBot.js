@@ -18,7 +18,7 @@ class EventBot {
     static async create(data) {
         // Service config
         const service = new chrome.ServiceBuilder(
-            path.join(__dirname, '..', driverPath)
+            path.join(__dirname, '..', data.driverPath)
         )
         // Initialise driver with Chrome as browser
         const driver = await new Builder()
