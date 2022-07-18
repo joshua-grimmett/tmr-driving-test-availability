@@ -1,8 +1,9 @@
 /**
  * Selenium Application to automate
- * AttendMe event creation for Glow College
+ * Transport and Main Roads driving test
+ * availability checking.
  * @author Joshua Grimmett
- * @date 22/4/2022
+ * @date 18/7/2022
  */
 require('dotenv').config();
 const details = require('./details')
