@@ -51,11 +51,11 @@ class EventBot {
         return new Promise(async (res, rej) => {
             // Go to login page
             await this.driver.get(urls.continuePage);
-            
+
             // Click login
             (await this.xpath(xpaths.continueButton))
                 .click();
-            
+
             // Wait to load
             await this.driver.wait(until.titleContains('Accept terms of use'), 1000);
 
@@ -67,7 +67,8 @@ class EventBot {
         return new Promise (async (res, rej) => {
             // Click accept
             (await this.xpath(xpaths.acceptButton))
-                .click();
+                .click()
+                .catch();
 
             // Wait to load
             await this.driver.sleep(1000);

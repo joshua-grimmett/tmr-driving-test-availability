@@ -20,7 +20,7 @@ EventBot
         await bot.bookingDetailsPage(details);
         await bot.confirmBookingDetailsPage();
         await bot.locationPage(details);
-        
+
         const nextDate = await bot.nextDate();
         console.log(nextDate);
     });
