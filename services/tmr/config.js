@@ -1,4 +1,9 @@
 module.exports = {
+    drivers: {
+        Linux: 'chromedriver_Linux_v103',
+        Darwin: 'chromedriver_Darwin_v103',
+        Windows_NT: 'chromedriver_Windows_NT_v103.exe',
+    },
     urls: {
         continuePage: 'https://www.service.transport.qld.gov.au/SBSExternal/public/WelcomeDEReschedule.xhtml?utm_medium=sbs-email&utm_source=tmr-email&utm_campaign=sbs-email-reschedule',
         createEvent: 'https://attendme.eventus.io/create_event?for_group=my-organization-4296',

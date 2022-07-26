@@ -4,7 +4,7 @@ const { WebDriver } = require('selenium-webdriver');
 const { WebElementPromise } = require('selenium-webdriver');
 const { Builder, By, until } = require('selenium-webdriver');
 
-const { urls, xpaths, selectors } = require('../../../config');
+const { urls, xpaths, selectors } = require('../config');
 
 
 class EventBot {
@@ -17,9 +17,7 @@ class EventBot {
 
     static async create(data) {
         // Service config
-        const service = new chrome.ServiceBuilder(
-            path.join(__dirname, '..', data.driverPath)
-        )
+        const service = new chrome.ServiceBuilder(data.driverPath);
         // Initialise driver with Chrome as browser
         const driver = await new Builder()
             .forBrowser('chrome')
