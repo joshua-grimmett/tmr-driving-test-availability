@@ -16,6 +16,7 @@
     "express-openid-connect": "^2.8.0",
     "express-pug": "^1.0.0",
     "moment": "^2.29.4",
+    "mongoose": "^6.4.7",
     "postcss": "^8.4.14",
     "postcss-cli": "^10.0.0",
     "pug": "^3.0.2",

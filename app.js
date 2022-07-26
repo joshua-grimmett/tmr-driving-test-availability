@@ -7,6 +7,10 @@
 const express = require('express');
 const app = express();
 
+// Connect to DB
+const mongoose = require('mongoose');
+mongoose.connect(`mongodb+srv://client:${process.env.MONGODB_PW}@cluster0.ou5lj.mongodb.net/microservices?retryWrites=true&w=majority`);
+
 // Middleware
 const Auth0 = require('./controllers/Auth0Controller');
 Auth0.initialiseAuth0(app);
