@@ -1,0 +1,9 @@
+extends ./layouts/protected.pug
+
+include ./partials/navbar.pug
+
+block app
+    body
+        +navbar()
+        .container.mx-auto
+            h1.text-2xl.font-bold.py-4 Booking Availability

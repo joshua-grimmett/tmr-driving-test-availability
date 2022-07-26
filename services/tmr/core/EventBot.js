@@ -4,7 +4,7 @@ const { WebDriver } = require('selenium-webdriver');
 const { WebElementPromise } = require('selenium-webdriver');
 const { Builder, By, until } = require('selenium-webdriver');
 
-const { urls, xpaths, selectors } = require('../config');
+const { urls, xpaths, selectors } = require('../../../config');
 
 
 class EventBot {

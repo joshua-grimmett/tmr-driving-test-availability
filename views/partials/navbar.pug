@@ -1,0 +1,23 @@
+mixin navbar()
+    .bg-neutral-600
+        .container.mx-auto.w-full.flex.flex-row-reverse.py-3
+            span.text-white.cursor-auto Availability Checker
+    nav.bg-sky-800
+        .container.mx-auto
+            .flex.flex-row
+                img.w-80.py-3(src="https://static.qgov.net.au/assets/v4/latest/images/coat-of-arms/qg-coa-white.svg")
+            .flex.flex-row.justify-between.pt-7
+                ul.flex.flex-row.items-center.gap-2
+                    li.text-white
+                        a(href="/") Availability
+                    li.text-white
+                        a(href="/settings") Settings
+                ul.py-2
+                    if !user
+                        li.flex.justify-center.text-white
+                            span.material-icons person
+                            a(href="/login") Login
+                    else
+                        li.flex.justify-center.text-white
+                            span.material-icons person
+                            a(href="/account") My Account
