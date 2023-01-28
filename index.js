@@ -3,7 +3,7 @@ require('dotenv').config();
 const http = require('http');
 const app = require('./app');
 
-const port = 4242;
+const port = process.env.PORT || 4242;
 
 const Logger = require('./util/Logger');
 

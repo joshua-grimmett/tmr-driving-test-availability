@@ -25,4 +25,5 @@ EventBot
 
         const nextDate = await bot.nextDate();
         console.log(nextDate);
+        await bot.quit();
     });

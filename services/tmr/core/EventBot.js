@@ -27,6 +27,10 @@ class EventBot {
         return new EventBot({ driver, ...data });
     }
 
+    async quit() {
+        await this.driver.quit();
+    }
+
     /**
      * Find WebElement by XPath
      * @param {String} path XPath String

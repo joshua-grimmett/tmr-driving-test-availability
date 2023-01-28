@@ -1,9 +1,27 @@
 extends ./layouts/protected.pug
 
-include ./partials/navbar.pug
+include ./mixins/navbar.pug
 
 block app
     body
         +navbar()
         .container.mx-auto
             h1.text-2xl.font-bold.py-4 Booking Availability
+
+            p Next available test
+
+            table.table-auto.border-collapse.border.border-slate-500.my-5.rounded
+                thead
+                    tr
+                        th.border.border-slate-800.bg-slate-800.px-3.py-2
+                        th.border.border-slate-800.bg-slate-800.px-3.py-2
+                tbody 
+                    tr
+                        td.border.border-slate-700.px-3.py-2 Test Date
+                        td.border.border-slate-700.px-3.py-2= moment(tests[0].date).format('DD MMM YYYY hh:mm a')
+                    tr
+                        td.border.border-slate-700.px-3.py-2 Centre
+                        td.border.border-slate-700.px-3.py-2= tests[0].centre
+
+            button.px-11.py-5.font-bold.rounded(class="bg-[#9ac02c]", onclick="update()") Check latest
+    script(src="/js/tests.js") 
